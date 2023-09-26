@@ -1,0 +1,45 @@
+#detail-archive-page{
+    padding: 15px 15px;
+    border-radius: 7px;
+}
+#detail-archive-page p{
+    font-family: IRANYekanX-Medium;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 25px;
+}
+.post-img-comment{
+    border: 1px solid #cccbcb;
+    border-radius: 5px;
+    box-shadow: #8a8d8e 3px 2px 10px;
+}
+.thumb img{
+    --color: rgb(57, 93, 81); /* the border color */
+    --border: 10px;   /* the border thickness*/
+    --offset: 20px;   /* control the offset*/
+    --gap: 5px;       /* the gap on hover */
+
+    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+    --_o: calc(3*var(--offset));
+
+    padding:
+            calc(var(--gap) + var(--border))
+            calc(var(--gap) + var(--border) + var(--offset))
+            calc(var(--gap) + var(--border) + var(--offset))
+            calc(var(--gap) + var(--border));
+    background:
+            linear-gradient(      var(--_c)) var(--_o) var(--_o),
+            linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+    background-repeat: no-repeat;
+    filter: grayscale(.4);
+    transition: .5s;
+    cursor: pointer;
+}
+.thumb img:hover{
+    --color: #9d7c5b;
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    filter: grayscale(0);
+
+}
